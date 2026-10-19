@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Joyeux anniversaire Grâce</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --orange: #F4A261;
+            --orange-dark: #D9823B;
+            --orange-light: #FAD7B5;
+            --orange-pale: #FCEBDD;
+            --cream: #FFF8F0;
+            --white: #FFFFFF;
+            --brown: #654638;
+            --brown-light: #927565;
+            --shadow: rgba(120, 70, 40, .14);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at 10% 10%, rgba(244,162,97,.20), transparent 25%),
+                radial-gradient(circle at 90% 30%, rgba(250,215,181,.45), transparent 25%),
+                var(--cream);
+            color: var(--brown);
+            font-family: "DM Sans", sans-serif;
+            overflow-x: hidden;
+        }
+.video-label {
+    padding: 16px 8px 8px;
+    font-family: "DM Sans", sans-serif;
+}
+
+.video-label strong {
+    display: block;
+    font-family: "Patrick Hand", cursive;
+    font-size: 25px;
+    color: var(--orange-dark);
+    margin-bottom: 5px;
+}
+
+.video-label span {
+    display: block;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--brown-light);
+}
+        /* =========================
+           DECORATIONS
+        ========================= */
+
+        .floating {
+            position: fixed;
+            pointer-events: none;
+            z-index: 20;
+            opacity: .55;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .heart {
+            font-size: 24px;
+            color: var(--orange);
+        }
+
+        .star {
+            font-size: 25px;
+            color: var(--orange-dark);
+        }
+
+        .flower {
+            font-size: 30px;
+        }
+
+        .f1 {
+            left: 3%;
+            top: 20%;
+        }
+
+        .f2 {
+            right: 4%;
+            top: 45%;
+            animation-delay: 1s;
+        }
+
+        .f3 {
+            left: 6%;
+            bottom: 15%;
+            animation-delay: 2s;
+        }
+
+        .f4 {
+            right: 7%;
+            bottom: 25%;
+            animation-delay: 3s;
+        }
+
+        @keyframes float {
+            0%,100% {
+                transform: translateY(0) rotate(-4deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(5deg);
+            }
+        }
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        .intro-card {
+            width: min(900px, 100%);
+            min-height: 620px;
+            background: var(--white);
+            border-radius: 30px;
+            padding: 55px;
+            box-shadow: 0 25px 70px var(--shadow);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: 5px solid var(--orange-pale);
+        }
+
+        .intro-card::before {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: var(--orange-light);
+            border-radius: 50%;
+            top: -190px;
+            left: -120px;
+            opacity: .65;
+        }
+
+        .intro-card::after {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background: var(--orange-pale);
+            border-radius: 50%;
+            right: -100px;
+            bottom: -100px;
+        }
+
+        .intro-content {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+        }
+
+        .small-label {
+            display: inline-block;
+            background: var(--orange-pale);
+            padding: 9px 20px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .intro h1 {
+            font-family: "Patrick Hand", cursive;
+            font-size: clamp(55px, 9vw, 105px);
+            line-height: .9;
+            color: var(--orange-dark);
+            transform: rotate(-2deg);
+        }
+
+        .intro h1 span {
+            display: block;
+            color: var(--brown);
+        }
+
+        .intro p {
+            font-family: "Patrick Hand", cursive;
+            font-size: 27px;
+            margin: 35px auto;
+            max-width: 520px;
+            line-height: 1.25;
+        }
+
+        .open-btn {
+            border: none;
+            background: var(--orange-dark);
+            color: white;
+            padding: 17px 35px;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(217,130,59,.3);
+            transition: .3s ease;
+        }
+
+        .open-btn:hover {
+            transform: translateY(-4px) scale(1.03);
+        }
+
+        .arrow {
+            display: block;
+            margin-top: 30px;
+            font-size: 25px;
+            animation: bounce 1.5s infinite;
+        }
+
+        @keyframes bounce {
+            50% {
+                transform: translateY(8px);
+            }
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        main {
+            max-width: 1150px;
+            margin: auto;
+            padding: 40px 20px 100px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 80px 0 35px;
+        }
+
+        .section-title .number {
+            color: var(--orange-dark);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .section-title h2 {
+            font-family: "Patrick Hand", cursive;
+            font-size: clamp(38px, 6vw, 65px);
+            line-height: 1;
+            margin-top: 8px;
+        }
+
+        .section-title p {
+            max-width: 550px;
+            margin: 12px auto;
+            color: var(--brown-light);
+        }
+
+        /* =========================
+           MESSAGE CARD
+        ========================= */
+
+        .message-card {
+            background: white;
+            border-radius: 25px;
+            padding: 55px;
+            box-shadow: 0 18px 45px var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .message-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background: var(--orange);
+        }
+
+        .message-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .message-text h3 {
+            font-family: "Patrick Hand", cursive;
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .message-text p {
+            line-height: 1.8;
+            color: var(--brown-light);
+        }
+
+        .verse {
+            margin-top: 25px;
+            padding: 22px;
+            background: var(--orange-pale);
+            border-left: 5px solid var(--orange);
+            border-radius: 12px;
+        }
+
+        .verse strong {
+            display: block;
+            margin-bottom: 7px;
+            color: var(--orange-dark);
+        }
+
+        .verse small {
+            display: block;
+            margin-top: 8px;
+            font-weight: 700;
+        }
+
+        /* =========================
+           PHOTO
+        ========================= */
+
+        .photo-area {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .polaroid {
+            background: white;
+            padding: 14px 14px 45px;
+            box-shadow: 0 15px 35px rgba(80,50,30,.18);
+            transform: rotate(3deg);
+            width: min(100%, 390px);
+            position: relative;
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: 390px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .polaroid::after {
+            content: "Grâce ♡";
+            position: absolute;
+            bottom: 11px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-family: "Patrick Hand", cursive;
+            font-size: 23px;
+        }
+
+        .tape {
+            position: absolute;
+            width: 100px;
+            height: 30px;
+            background: rgba(250,215,181,.8);
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-4deg);
+            z-index: 3;
+        }
+
+        /* =========================
+           VIDEO COLLAGE
+        ========================= */
+
+        .video-collage {
+            display: grid;
+            grid-template-columns: 1.35fr .85fr;
+            gap: 18px;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 22px;
+            padding: 12px;
+            box-shadow: 0 15px 35px var(--shadow);
+            position: relative;
+        }
+
+        .video-card:nth-child(1) {
+            transform: rotate(-1deg);
+        }
+
+        .video-card:nth-child(2) {
+            transform: rotate(1.5deg);
+        }
+
+        .video-card:nth-child(3) {
+            transform: rotate(1deg);
+        }
+
+        .video-card:nth-child(4) {
+            transform: rotate(-1.5deg);
+        }
+
+        .video-card video {
+            width: 100%;
+            height: 330px;
+            object-fit: cover;
+            border-radius: 15px;
+            display: block;
+            background: #eee;
+        }
+
+        .video-card.small video {
+            height: 210px;
+        }
+
+        .video-label {
+            padding: 13px 8px 4px;
+            font-family: "Patrick Hand", cursive;
+            font-size: 21px;
+        }
+
+        /* =========================
+           MEMORY WALL
+        ========================= */
+
+        .memory-wall {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .memory {
+            background: white;
+            min-height: 190px;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px var(--shadow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .memory:nth-child(2) {
+            background: var(--orange-pale);
+            transform: rotate(2deg);
+        }
+
+        .memory:nth-child(3) {
+            transform: rotate(-2deg);
+        }
+
+        .memory:nth-child(4) {
+            background: var(--orange-light);
+            transform: rotate(1deg);
+        }
+
+        .memory p {
+            font-family: "Patrick Hand", cursive;
+            font-size: 25px;
+            line-height: 1.2;
+        }
+
+        /* =========================
+           BLESSING
+        ========================= */
+
+        .blessing {
+            background: var(--orange);
+            color: white;
+            border-radius: 30px;
+            padding: 75px 35px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(217,130,59,.25);
+        }
+
+        .blessing::before,
+        .blessing::after {
+            content: "♡";
+            position: absolute;
+            font-size: 180px;
+            opacity: .12;
+        }
+
+        .blessing::before {
+            left: -50px;
+            top: -70px;
+        }
+
+        .blessing::after {
+            right: -50px;
+            bottom: -100px;
+        }
+
+        .blessing h2 {
+            font-family: "Patrick Hand", cursive;
+            font-size: clamp(48px, 8vw, 80px);
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .blessing p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .blessing .verse {
+            margin: 35px auto 0;
+            max-width: 700px;
+            background: rgba(255,255,255,.17);
+            border-left-color: white;
+            text-align: left;
+            color: white;
+        }
+
+        .blessing .verse strong {
+            color: white;
+        }
+
+        /* =========================
+           FINAL
+        ========================= */
+
+        .final {
+            text-align: center;
+            padding: 120px 20px 30px;
+        }
+
+        .final .crown {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .final h2 {
+            font-family: "Patrick Hand", cursive;
+            font-size: clamp(55px, 10vw, 110px);
+            color: var(--orange-dark);
+            line-height: .9;
+        }
+
+        .final h2 span {
+            display: block;
+            color: var(--brown);
+        }
+
+        .final p {
+            margin: 30px auto;
+            max-width: 600px;
+            color: var(--brown-light);
+            line-height: 1.7;
+        }
+
+        .signature {
+            font-family: "Pacifico", cursive;
+            font-size: 27px;
+            color: var(--orange-dark);
+        }
+
+        /* =========================
+           MUSIC
+        ========================= */
+
+        .music-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 52px;
+            height: 52px;
+            border: none;
+            border-radius: 50%;
+            background: var(--brown);
+            color: white;
+            cursor: pointer;
+            z-index: 50;
+            font-size: 19px;
+            box-shadow: 0 8px 25px rgba(0,0,0,.15);
+        }
+
+        /* =========================
+           SCROLL REVEAL
+        ========================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: 1s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .intro-card {
+                min-height: 600px;
+                padding: 35px 20px;
+            }
+
+            .intro p {
+                font-size: 23px;
+            }
+
+            .message-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .message-card {
+                padding: 40px 25px;
+            }
+
+            .message-text {
+                order: 2;
+            }
+
+            .photo-area {
+                order: 1;
+            }
+
+            .polaroid img {
+                height: 330px;
+            }
+
+            .video-collage {
+                grid-template-columns: 1fr;
+            }
+
+            .video-card video,
+            .video-card.small video {
+                height: 330px;
+            }
+
+            .memory-wall {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .memory {
+                min-height: 170px;
+            }
+        }
+
+        @media (max-width: 520px) {
+
+            main {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            .section-title {
+                margin-top: 60px;
+            }
+
+            .memory-wall {
+                grid-template-columns: 1fr;
+            }
+
+            .memory:nth-child(n) {
+                transform: none;
+            }
+
+            .video-card:nth-child(n) {
+                transform: none;
+            }
+
+            .video-card video,
+            .video-card.small video {
+                height: 260px;
+            }
+
+            .blessing {
+                padding: 60px 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Décorations -->
+    <div class="floating heart f1">♡</div>
+    <div class="floating star f2">✦</div>
+    <div class="floating flower f3">✿</div>
+    <div class="floating heart f4">♡</div>
+
+
+    <!-- =========================
+         INTRO
+    ========================== -->
+
+    <section class="intro">
+
+        <div class="intro-card">
+
+            <div class="intro-content">
+
+                <div class="small-label">
+                    Une surprise pour toi
+                </div>
+
+                <h1>
+                    Hey Grâce,
+                    <span>tu as un message !</span>
+                </h1>
+
+                <p>
+                    Aujourd'hui n'est pas un jour comme les autres...
+                    quelque chose de spécial t'attend.
+                </p>
+
+                <button class="open-btn" onclick="openBirthday()">
+                    OUVRIR MON MESSAGE
+                </button>
+
+                <span class="arrow">↓</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTENU
+    ========================== -->
+
+    <main id="birthdayContent" style="display:none;">
+
+
+        <!-- SECTION 01 -->
+
+        <div class="section-title reveal">
+
+            <div class="number">01 — UNE PETITE SURPRISE</div>
+
+            <h2>Es-tu prête, Grâce ?</h2>
+
+            <p>
+                Parce qu'une personne aussi précieuse que toi
+                mérite plus qu'un simple « joyeux anniversaire ».
+            </p>
+
+        </div>
+
+
+        <section class="message-card reveal">
+
+            <div class="message-grid">
+
+                <div class="message-text">
+
+                    <h3>
+                        Aujourd'hui,<br>
+                        on célèbre TOI.
+                    </h3>
+
+                    <p>
+                        Une nouvelle année commence.
+                        Une nouvelle page s'écrit.
+                        Et au milieu de toutes les choses que la vie
+                        peut apporter, nous voulons simplement te rappeler
+                        à quel point ta présence est précieuse.
+                    </p>
+
+                    <div class="verse">
+
+                        <strong>
+                            « C'est ici la journée que l'Éternel a faite :
+                            qu'elle soit pour nous un sujet de joie. »
+                        </strong>
+
+                        <small>
+                            Psaume 118:24
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="photo-area">
+
+                    <div class="polaroid">
+
+                        <div class="tape"></div>
+
+                        <img
+                          src="images/grace.jpg"
+                            alt="Photo de Grâce"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+       <!-- =========================
+     02 — DES SOUVENIRS
+========================= -->
+
+<div class="section-title reveal">
+
+    <div class="number">02 — DES SOUVENIRS</div>
+
+    <h2>Quelques moments de toi...</h2>
+
+    <p>
+        Parce que certaines personnes rendent les souvenirs
+        encore plus beaux.
+    </p>
+
+</div>
+
+
+<section class="video-collage reveal">
+
+    <!-- VIDEO 1 -->
+    <article class="video-card">
+
+        <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+        >
+            <source src="videos/video1.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-label">
+            <strong>Ta douceur ♡</strong>
+            <span>
+                Tu es de ces personnes dont la présence
+                suffit à rendre une journée plus belle.
+            </span>
+        </div>
+
+    </article>
+
+
+    <!-- VIDEO 2 -->
+    <article class="video-card small">
+
+        <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+        >
+            <source src="videos/video2.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-label">
+            <strong>Ton sourire</strong>
+            <span>
+                Ton sourire a cette façon particulière
+                de rendre les moments encore plus beaux.
+            </span>
+        </div>
+
+    </article>
+
+
+    <!-- VIDEO 3 -->
+    <article class="video-card small">
+
+        <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+        >
+            <source src="videos/video3.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-label">
+            <strong>Ton énergie ✦</strong>
+            <span>
+                Tu portes en toi quelque chose de rare :
+                une belle énergie qui fait du bien autour de toi.
+            </span>
+        </div>
+
+    </article>
+
+
+    <!-- VIDEO 4 -->
+    <article class="video-card">
+
+        <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+        >
+            <source src="videos/video4.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-label">
+            <strong>Une personne précieuse ♡</strong>
+            <span>
+                Grâce, tu es une personne précieuse.
+                Que Dieu continue de faire de ta vie
+                un magnifique témoignage.
+            </span>
+        </div>
+
+    </article>
+
+</section>
+
+
+        <!-- SECTION 03 -->
+
+        <div class="section-title reveal">
+
+            <div class="number">03 — POUR TON NOUVEAU CHAPITRE</div>
+
+            <h2>Une année remplie de grâce</h2>
+
+        </div>
+
+
+        <section class="memory-wall reveal">
+
+            <div class="memory">
+
+                <p>
+                    Que tes rêves deviennent
+                    progressivement réalité.
+                </p>
+
+            </div>
+
+            <div class="memory">
+
+                <p>
+                    Que chaque nouveau jour
+                    t'apporte une raison de sourire.
+                </p>
+
+            </div>
+
+            <div class="memory">
+
+                <p>
+                    Que Dieu te donne
+                    la force d'aller toujours plus loin.
+                </p>
+
+            </div>
+
+            <div class="memory">
+
+                <p>
+                    Que cette nouvelle année
+                    soit meilleure que la précédente.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- VERSET -->
+
+        <section class="message-card reveal" style="margin-top:25px;">
+
+            <div style="text-align:center; max-width:750px; margin:auto;">
+
+                <div style="
+                    font-size:45px;
+                    color:var(--orange);
+                    margin-bottom:15px;
+                ">
+                    ✦
+                </div>
+
+                <h3 style="
+                    font-family:'Patrick Hand',cursive;
+                    font-size:42px;
+                    margin-bottom:20px;
+                ">
+                    N'oublie jamais ceci
+                </h3>
+
+                <p style="
+                    line-height:1.8;
+                    color:var(--brown-light);
+                ">
+                    Tu n'entres pas simplement dans une nouvelle année.
+                    Tu entres dans une nouvelle saison.
+                    Que celle-ci soit remplie de paix,
+                    de croissance, de belles rencontres,
+                    de projets accomplis et surtout
+                    de la présence de Dieu.
+                </p>
+
+                <div class="verse" style="text-align:left;">
+
+                    <strong>
+                        « Je puis tout par celui qui me fortifie. »
+                    </strong>
+
+                    <small>
+                        Philippiens 4:13
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BÉNÉDICTION
+        ========================== -->
+
+        <div class="section-title reveal">
+
+            <div class="number">04 — UNE PRIÈRE POUR TOI</div>
+
+        </div>
+
+
+        <section class="blessing reveal">
+
+            <h2>
+                Que Dieu te bénisse,
+                Grâce.
+            </h2>
+
+            <p>
+                Que sa lumière accompagne chacun de tes pas.
+                Qu'il t'accorde la sagesse dans tes décisions,
+                la paix dans les moments difficiles,
+                la joie dans les petites choses
+                et la force pour accomplir ce qu'il a placé
+                dans ton cœur.
+            </p>
+
+
+            <div class="verse">
+
+                <strong>
+                    « L'Éternel te bénit et te garde !
+                    L'Éternel fait briller sur toi son visage
+                    et t'accorde sa grâce ! »
+                </strong>
+
+                <small>
+                    Nombres 6:24-25
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FINAL
+        ========================== -->
+
+        <section class="final reveal">
+
+            <div class="crown">
+                ✦
+            </div>
+
+            <h2>
+                Happy Birthday,
+                <span>Grâce ♡</span>
+            </h2>
+
+            <p>
+                Que cette nouvelle année soit une histoire
+                encore plus belle que toutes celles que tu as
+                déjà vécues.
+                
+                Continue de sourire, de rêver,
+                d'aimer et d'avancer.
+                
+                Le meilleur est encore à venir.
+            </p>
+
+            <div class="verse" style="
+                max-width:650px;
+                margin:35px auto;
+                text-align:left;
+            ">
+
+                <strong>
+                    « Je connais les projets que j'ai formés sur vous,
+                    dit l'Éternel, projets de paix et non de malheur,
+                    afin de vous donner un avenir et de l'espérance. »
+                </strong>
+
+                <small>
+                    Jérémie 29:11
+                </small>
+
+            </div>
+
+            <div class="signature">
+                Avec beaucoup d'amour ♡
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MUSIQUE -->
+
+    <button
+        class="music-btn"
+        id="musicButton"
+        onclick="toggleMusic()"
+        aria-label="Musique"
+    >
+        ♪
+    </button>
+
+    <audio id="backgroundMusic" loop>
+        <source src="music/anniversaire.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <script>
+
+        /* =========================
+           OUVERTURE
+        ========================== */
+
+        function openBirthday() {
+
+            const content = document.getElementById("birthdayContent");
+
+            content.style.display = "block";
+
+            setTimeout(() => {
+
+                content.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+                revealElements();
+
+            }, 100);
+
+        }
+
+
+        /* =========================
+           ANIMATIONS AU SCROLL
+        ========================== */
+
+        function revealElements() {
+
+            const elements = document.querySelectorAll(".reveal");
+
+            const observer = new IntersectionObserver(
+
+                (entries) => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("visible");
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: .12
+                }
+
+            );
+
+            elements.forEach(element => {
+
+                observer.observe(element);
+
+            });
+
+        }
+
+
+        /* =========================
+           MUSIQUE
+        ========================== */
+
+        const music = document.getElementById("backgroundMusic");
+        const musicButton = document.getElementById("musicButton");
+
+        let musicPlaying = false;
+
+        function toggleMusic() {
+
+            if (!musicPlaying) {
+
+                music.play()
+                    .then(() => {
+
+                        musicPlaying = true;
+                        musicButton.textContent = "❚❚";
+
+                    })
+                    .catch(() => {
+
+                        alert(
+                            "Ajoute ton fichier music.mp3 dans le dossier du site."
+                        );
+
+                    });
+
+            } else {
+
+                music.pause();
+
+                musicPlaying = false;
+
+                musicButton.textContent = "♪";
+
+            }
+
+        }
+
+
+        /* =========================
+           PETITS EFFETS
+        ========================== */
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const intro = document.querySelector(".intro");
+
+            intro.addEventListener("mousemove", (e) => {
+
+                const x =
+                    (window.innerWidth / 2 - e.clientX) / 100;
+
+                const y =
+                    (window.innerHeight / 2 - e.clientY) / 100;
+
+                const card =
+                    document.querySelector(".intro-card");
+
+                card.style.transform =
+                    `perspective(1000px)
+                     rotateY(${x}deg)
+                     rotateX(${y}deg)`;
+
+            });
+
+            intro.addEventListener("mouseleave", () => {
+
+                document.querySelector(".intro-card").style.transform =
+                    "perspective(1000px) rotateY(0) rotateX(0)";
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
